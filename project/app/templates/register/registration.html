@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+   <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<div class="container">
+    <div class="text">
+        <h2 class="text1">Регистрация</h2>
+        <p>Создайте учётную запись</p>
+
+    </div>
+    <div class="form">
+        <form action="" method="post">
+            {% csrf_token %}
+        <p class="radis">Ввдите Имя<br>{{ form.name }}</p>
+        <p class="radis">Ввдите Email<br>{{ form.email }}</p>
+        <p class="radis">Ввдите Пароль<br>{{ form.password }}</p>
+    <button class="button">Регистрация</button>
+    </form>
+        </div>
+    <a href="/app/login">Вернуться к странице входа</a>
+
+</div>
+</body>
+</html>
